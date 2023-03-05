@@ -18,6 +18,7 @@ async function run() {
         });
 
         for await (const line of rl) {
+            console.log(line);
             const match = line.match(regex);
             if (match) {
                 console.log(match);
