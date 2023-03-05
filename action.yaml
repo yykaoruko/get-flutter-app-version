@@ -11,4 +11,4 @@ outputs:
     description: 'current build number'
 runs:
   using: 'node16'
-  main: 'index.js'
+  main: 'dist/index.js'
