@@ -1,5 +1,4 @@
 const fs = require('fs');
-const path = require('path');
 const readline = require('readline');
 const core = require('@actions/core');
 
@@ -18,7 +17,6 @@ async function run() {
         });
 
         for await (const line of rl) {
-            console.log(line);
             const match = line.match(regex);
             if (match) {
                 console.log(match);
@@ -26,8 +24,7 @@ async function run() {
                 core.setOutput('minor', Number(match[2]));
                 core.setOutput('patch', Number(match[3]));
                 core.setOutput('build', Number(match[4]));
-            } else {
-                throw(new Error('no match'));
+                break;
             }
         }
 

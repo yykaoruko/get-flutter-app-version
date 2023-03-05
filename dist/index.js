@@ -2826,7 +2826,6 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 const fs = __nccwpck_require__(147);
-const path = __nccwpck_require__(17);
 const readline = __nccwpck_require__(521);
 const core = __nccwpck_require__(186);
 
@@ -2845,7 +2844,6 @@ async function run() {
         });
 
         for await (const line of rl) {
-            console.log(line);
             const match = line.match(regex);
             if (match) {
                 console.log(match);
@@ -2853,8 +2851,7 @@ async function run() {
                 core.setOutput('minor', Number(match[2]));
                 core.setOutput('patch', Number(match[3]));
                 core.setOutput('build', Number(match[4]));
-            } else {
-                throw(new Error('no match'));
+                break;
             }
         }
 
