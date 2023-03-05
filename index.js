@@ -5,7 +5,7 @@ const core = require('@actions/core');
 async function run() {
     try {
         const filePath = './pubspec.yaml';
-        const regex = /^version: ([0-9]+)\.([0-9]+)\.([0-9]+)\+([0-9]+)/;
+        const regex = /version: ([0-9]+)\.([0-9]+)\.([0-9]+)\+([0-9]+)/;
 
         const stream = fs.createReadStream(filePath, (err, data) => {
             if (err) throw err;
