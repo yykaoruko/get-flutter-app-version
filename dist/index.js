@@ -2846,8 +2846,8 @@ async function run() {
         for await (const line of rl) {
             core.debug(line);
             const match = line.match(regex);
+            core.debug(match);
             if (match) {
-                core.debug(match);
                 core.setOutput('major', Number(match[1]));
                 core.setOutput('minor', Number(match[2]));
                 core.setOutput('patch', Number(match[3]));
