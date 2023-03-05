@@ -2832,7 +2832,7 @@ const core = __nccwpck_require__(186);
 
 async function run() {
     try {
-        const filePath = path.resolve('pubspec.yaml');
+        const filePath = './pubspec.yaml';
         const regex = /^version: ([0-9]+)\.([0-9]+)\.([0-9]+)\+([0-9]+)/;
 
         const stream = fs.createReadStream(filePath, (err, data) => {
