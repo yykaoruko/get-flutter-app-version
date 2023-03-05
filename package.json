@@ -1,0 +1,23 @@
+{
+  "name": "get-flutter-app-version",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/yykaoruko/get-flutter-app-version.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yykaoruko/get-flutter-app-version/issues"
+  },
+  "homepage": "https://github.com/yykaoruko/get-flutter-app-version#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1"
+  }
+}

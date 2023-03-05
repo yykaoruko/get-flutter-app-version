@@ -1,0 +1,19 @@
+name: 'get-flutter-app-version'
+description: 'get flutter app version from pubspec.yaml'
+inputs:
+  # who-to-greet:
+  #   description: 'Who to greet'
+  #   required: true
+  #   default: 'World'
+outputs:
+  major:
+    description: 'current major number'
+  minor:
+    description: 'current minor number'
+  patch:
+    description: 'current patch number'
+  build:
+    description: 'current build number'
+runs:
+  using: 'node16'
+  main: 'index.js'
